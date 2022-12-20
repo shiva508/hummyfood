@@ -2,7 +2,13 @@ import { StyleSheet } from "react-native";
 import StackNavigation from "./StackNavigation";
 import { Entypo } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import LoginScreen from "../components/login/LoginScreen";
+import Studenttpool from "../components/login/Studenttpool";
+import UserDetails from "../components/login/UserDetails";
+import FavorateMeal from "../components/login/FavorateMeal";
+import { MaterialIcons } from "@expo/vector-icons";
+const ButtonTab = createBottomTabNavigator();
 const TabNavigation = () => {
   return (
     <ButtonTab.Navigator
@@ -60,6 +66,7 @@ const TabNavigation = () => {
         name="stackNavigation"
         component={StackNavigation}
         options={{
+          headerShown: false,
           title: "Pictures",
           headerTitleAlign: "left",
           headerTitleStyle: { fontWeight: "bold", color: "white" },
@@ -67,6 +74,20 @@ const TabNavigation = () => {
           tabBarInactiveTintColor: "#868e96",
           tabBarIcon: ({ color, size }) => {
             return <Entypo name="images" size={size} color={color} />;
+          },
+        }}
+      ></ButtonTab.Screen>
+      <ButtonTab.Screen
+        name="favorateMeal"
+        component={FavorateMeal}
+        options={{
+          title: "Favorite",
+          headerTitleAlign: "left",
+          headerTitleStyle: { fontWeight: "bold", color: "white" },
+          tabBarActiveTintColor: "white",
+          tabBarInactiveTintColor: "#868e96",
+          tabBarIcon: ({ color, size }) => {
+            return <MaterialIcons name="favorite" size={size} color={color} />;
           },
         }}
       ></ButtonTab.Screen>
