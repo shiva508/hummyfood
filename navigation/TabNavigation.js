@@ -6,8 +6,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import LoginScreen from "../components/login/LoginScreen";
 import Studenttpool from "../components/login/Studenttpool";
 import UserDetails from "../components/login/UserDetails";
-import FavorateMeal from "../components/login/FavorateMeal";
 import { MaterialIcons } from "@expo/vector-icons";
+import FavorateMealScreen from "../screens/FavorateMealScreen";
 const ButtonTab = createBottomTabNavigator();
 const TabNavigation = () => {
   return (
@@ -78,8 +78,8 @@ const TabNavigation = () => {
         }}
       ></ButtonTab.Screen>
       <ButtonTab.Screen
-        name="favorateMeal"
-        component={FavorateMeal}
+        name="favorateMealScreen"
+        component={FavorateMealScreen}
         options={{
           title: "Favorite",
           headerTitleAlign: "left",

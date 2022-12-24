@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 const UserDetails = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>User Details</Text>
+      <Image source={{}}></Image>
     </View>
   );
 };
