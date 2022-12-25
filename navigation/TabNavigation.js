@@ -52,7 +52,7 @@ const TabNavigation = () => {
         name="userdetails"
         component={UserDetails}
         options={{
-          title: "Account",
+          title: "Profile",
           headerTitleAlign: "left",
           headerTitleStyle: { fontWeight: "bold", color: "white" },
           tabBarActiveTintColor: "white",
